@@ -24,4 +24,5 @@ int Prompt(string message)
 }
 int number1 = Prompt("Enter first number ");
 int number2 = Prompt("Enter second number ");
+Console.WriteLine($"All even numbers between {number1} and {number2}");
 EvenNumbers(number1 , number2);
