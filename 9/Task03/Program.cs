@@ -9,17 +9,15 @@ int Prompt(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void SumOfNumbers (int number)
+int SumOfNumbers(int number)
 {
-    int sum = 0;
-    while(number % 10 > 0) //&& number / 10 > 0)
-    {
-        int n = number % 10;
-        sum += n;
-        number = number / 10;
 
+    if (number == 0)
+    {
+        return 0;
     }
-    Console.WriteLine($"sum of numbers = {sum}");
+    
+    return number % 10 + SumOfNumbers(number / 10);
 }
 int n = Prompt("Enter a number ");
-SumOfNumbers(n);
+Console.WriteLine(SumOfNumbers(n));
